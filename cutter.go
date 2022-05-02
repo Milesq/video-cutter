@@ -15,7 +15,7 @@ type Config struct {
 }
 
 func getConfigFromFile() (config []Config) {
-	data, err := ioutil.ReadFile("config.json")
+	data, err := ioutil.ReadFile(configPath)
 	if err != nil {
 		panic(err)
 	}

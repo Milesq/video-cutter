@@ -1,8 +1,8 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
+
+const configPath = "config.json"
 
 func main() {
 	fmt.Println("cut...")
