@@ -16,6 +16,14 @@ func parseDuration(part string) time.Duration {
 	return dur
 }
 
+func fileExists(path string) bool {
+	if _, err := os.Stat(path); os.IsNotExist(err) {
+		return false
+	}
+
+	return true
+}
+
 func safeMkdir(path string) {
 	if _, err := os.Stat(path); os.IsNotExist(err) {
 		os.Mkdir(path, fs.ModeDir)
